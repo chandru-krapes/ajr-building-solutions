@@ -18,24 +18,39 @@
 
 <body>
     <!-- Top Bar -->
-    <div class="top-bar">
+    <div class="top-info">
         <div class="container">
             <div class="top-bar-content">
-                <div class="top-bar-left">
-                    <a href="tel:9843006765" class="top-bar-item">
+                <div style="display: flex; gap: 10px;justify-content: space-between;align-items: center;width: 100%;">
+                    <a href="tel:1/234-567-8-9012" class="top-bar-item">
                         <i class="fas fa-phone"></i>
-                        <span>9843006765</span>
+                        <span>+91 9843006765</span>
                     </a>
-                    <a href="mailto:ajrbuildingsolution@gmail.com" class="top-bar-item">
+                    <a href="mailto:info@domain.com" class="top-bar-item">
                         <i class="fas fa-envelope"></i>
                         <span>ajrbuildingsolution@gmail.com</span>
                     </a>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="top-bar-left">
+                    <div class="logo">
+                        <i class="fas fa-hard-hat"></i>
+                        <span class="logo-text">AJR Building Solutions</span>
+                    </div>
+                </div>
                 <div class="top-bar-right">
-                    <span class="top-bar-item">
-                        <i class="fas fa-clock"></i>
-                        <span>Mon - Sun: 9:00 AM - 8:00 PM</span>
-                    </span>
+                    <div class="top-social-icons">
+                        <a href="#" class="top-social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="top-social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="top-social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="top-social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -45,19 +60,11 @@
     <nav class="navbar" id="navbar">
         <div class="container">
             <div class="nav-content">
-                <div class="logo">
-                    <i class="fas fa-hard-hat"></i>
-                    <span class="logo-text">AJR Building Solutions</span>
-                </div>
                 <div class="nav-links" id="navLinks">
-                    <a href="index.html" class="nav-link">Home</a>
-                    <a href="services.html" class="nav-link active">Services</a>
-                    <a href="about.html" class="nav-link">About Us</a>
-                    <a href="contact.html" class="nav-link">Contact</a>
-                    <a href="https://wa.me/919843006765?text=Hello%20AJR%20Building%20Solutions,%20I%20would%20like%20to%20inquire%20about%20your%20services."
-                        target="_blank" class="whatsapp-btn" title="Chat on WhatsApp">
-                        <i class="fab fa-whatsapp"></i>
-                    </a>    
+                    <a href="index.html" class="nav-link">HOME</a>
+                    <a href="about.html" class="nav-link">ABOUT</a>
+                    <a href="services.html" class="nav-link">SERVICES</a>
+                    <a href="contact.html" class="nav-link">CONTACT</a>
                 </div>
                 <button class="mobile-menu-btn" id="mobileMenuBtn">
                     <span></span>
@@ -68,236 +75,342 @@
         </div>
     </nav>
 
+
     <!-- Page Header -->
     <section class="page-header">
         <h1>Our Services</h1>
         <p>Comprehensive building solutions for residential and commercial properties</p>
     </section>
 
-    <!-- Services Section -->
-    <section class="services-detailed-section">
+        <!-- Why Choose AJR Section -->
+    <section class="why-choose-section">
         <div class="container">
-            <div class="services-detailed-grid">
-                <!-- Wooden Polishing -->
-                <div class="service-detail-card">
-                    <div class="service-detail-icon">
-                        <i class="fas fa-tree"></i>
+            <div class="why-choose-grid">
+                <div class="why-choose-content">
+                    <h2><i class="fas fa-question-circle"></i> Why Choose AJR Building Solutions</h2>
+                    <p>We stand out in the Chennai building services industry through our unwavering commitment to excellence, customer satisfaction, and quality workmanship. With years of experience and a team of skilled professionals, we deliver exceptional results that exceed expectations on every project.</p>
+                    
+                    <div class="feature-tags">
+                        <span class="feature-tag"><i class="fas fa-check-circle"></i> Licensed & Insured</span>
+                        <span class="feature-tag"><i class="fas fa-check-circle"></i> 24/7 Support</span>
+                        <span class="feature-tag"><i class="fas fa-check-circle"></i> Premium Materials</span>
+                        <span class="feature-tag"><i class="fas fa-check-circle"></i> Expert Team</span>
+                        <span class="feature-tag"><i class="fas fa-check-circle"></i> On-Time Delivery</span>
+                        <span class="feature-tag"><i class="fas fa-check-circle"></i> Competitive Pricing</span>
+                        <span class="feature-tag"><i class="fas fa-check-circle"></i> Quality Guarantee</span>
+                        <span class="feature-tag"><i class="fas fa-check-circle"></i> Free Consultation</span>
                     </div>
-                    <h3>Wooden Polishing</h3>
-                    <p>Expert wood restoration and polishing services to bring back the natural beauty of your wooden
-                        furniture and fixtures.</p>
-                    <ul class="service-features-list">
-                        <li><i class="fas fa-check"></i> Furniture polishing</li>
-                        <li><i class="fas fa-check"></i> Door & window polishing</li>
-                        <li><i class="fas fa-check"></i> Wood restoration</li>
-                        <li><i class="fas fa-check"></i> Premium finish</li>
-                    </ul>
                 </div>
-
-                <!-- Painting -->
-                <div class="service-detail-card">
-                    <div class="service-detail-icon">
-                        <i class="fas fa-paint-roller"></i>
-                    </div>
-                    <h3>Painting Services</h3>
-                    <p>Professional interior and exterior painting services with attention to detail and high-quality
-                        paints.</p>
-                    <ul class="service-features-list">
-                        <li><i class="fas fa-check"></i> Interior painting</li>
-                        <li><i class="fas fa-check"></i> Exterior painting</li>
-                        <li><i class="fas fa-check"></i> Texture painting</li>
-                        <li><i class="fas fa-check"></i> Color consultation</li>
-                    </ul>
-                </div>
-
-                <!-- Tank Cleaning -->
-                <div class="service-detail-card">
-                    <div class="service-detail-icon">
-                        <i class="fas fa-water"></i>
-                    </div>
-                    <h3>Tank Cleaning</h3>
-                    <p>Thorough water tank cleaning services to ensure clean and safe water supply for your property.
-                    </p>
-                    <ul class="service-features-list">
-                        <li><i class="fas fa-check"></i> Overhead tank cleaning</li>
-                        <li><i class="fas fa-check"></i> Underground tank cleaning</li>
-                        <li><i class="fas fa-check"></i> Sanitization</li>
-                        <li><i class="fas fa-check"></i> Regular maintenance</li>
-                    </ul>
-                </div>
-
-                <!-- Seepage Arresting -->
-                <div class="service-detail-card">
-                    <div class="service-detail-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3>Seepage Arresting</h3>
-                    <p>Effective waterproofing and seepage control solutions to protect your property from water damage.
-                    </p>
-                    <ul class="service-features-list">
-                        <li><i class="fas fa-check"></i> Waterproofing</li>
-                        <li><i class="fas fa-check"></i> Leak detection</li>
-                        <li><i class="fas fa-check"></i> Damp proofing</li>
-                        <li><i class="fas fa-check"></i> Long-term solutions</li>
-                    </ul>
-                </div>
-
-                <!-- Deep Cleaning -->
-                <div class="service-detail-card">
-                    <div class="service-detail-icon">
-                        <i class="fas fa-broom"></i>
-                    </div>
-                    <h3>Deep Cleaning</h3>
-                    <p>Comprehensive deep cleaning services for homes and offices ensuring every corner is spotless.</p>
-                    <ul class="service-features-list">
-                        <li><i class="fas fa-check"></i> Home deep cleaning</li>
-                        <li><i class="fas fa-check"></i> Office cleaning</li>
-                        <li><i class="fas fa-check"></i> Kitchen & bathroom</li>
-                        <li><i class="fas fa-check"></i> Sanitization services</li>
-                    </ul>
-                </div>
-
-                <!-- Tiles Work -->
-                <div class="service-detail-card">
-                    <div class="service-detail-icon">
-                        <i class="fas fa-th-large"></i>
-                    </div>
-                    <h3>Tiles Work</h3>
-                    <p>Professional tile installation, repair, and maintenance services for floors, walls, and
-                        bathrooms.</p>
-                    <ul class="service-features-list">
-                        <li><i class="fas fa-check"></i> Tile installation</li>
-                        <li><i class="fas fa-check"></i> Tile repair</li>
-                        <li><i class="fas fa-check"></i> Grouting</li>
-                        <li><i class="fas fa-check"></i> Floor & wall tiling</li>
-                    </ul>
-                </div>
-
-                <!-- Toughened Glass Work -->
-                <div class="service-detail-card">
-                    <div class="service-detail-icon">
-                        <i class="fas fa-window-maximize"></i>
-                    </div>
-                    <h3>Toughened Glass Work</h3>
-                    <p>High-quality toughened glass installation for windows, doors, partitions, and other applications.
-                    </p>
-                    <ul class="service-features-list">
-                        <li><i class="fas fa-check"></i> Glass partitions</li>
-                        <li><i class="fas fa-check"></i> Glass doors</li>
-                        <li><i class="fas fa-check"></i> Shower enclosures</li>
-                        <li><i class="fas fa-check"></i> Custom glass work</li>
-                    </ul>
-                </div>
-
-                <!-- Interior & Exterior Work -->
-                <div class="service-detail-card">
-                    <div class="service-detail-icon">
-                        <i class="fas fa-home"></i>
-                    </div>
-                    <h3>Interior & Exterior Work</h3>
-                    <p>Complete interior and exterior renovation services to transform your space according to your
-                        vision.</p>
-                    <ul class="service-features-list">
-                        <li><i class="fas fa-check"></i> Interior design</li>
-                        <li><i class="fas fa-check"></i> Exterior renovation</li>
-                        <li><i class="fas fa-check"></i> Space planning</li>
-                        <li><i class="fas fa-check"></i> Complete makeover</li>
-                    </ul>
-                </div>
-
-                <!-- Electrical, Plumbing, Carpenter Work -->
-                <div class="service-detail-card">
-                    <div class="service-detail-icon">
-                        <i class="fas fa-bolt"></i>
-                    </div>
-                    <h3>Electrical, Plumbing & Carpentry</h3>
-                    <p>Expert electrical, plumbing, and carpentry services for all your maintenance and installation
-                        needs.</p>
-                    <ul class="service-features-list">
-                        <li><i class="fas fa-check"></i> Electrical installations</li>
-                        <li><i class="fas fa-check"></i> Plumbing repairs</li>
-                        <li><i class="fas fa-check"></i> Carpentry work</li>
-                        <li><i class="fas fa-check"></i> Emergency services</li>
-                    </ul>
-                </div>
-
-                <!-- UPVC & Glass Door Works -->
-                <div class="service-detail-card">
-                    <div class="service-detail-icon">
-                        <i class="fas fa-door-open"></i>
-                    </div>
-                    <h3>UPVC & Glass Door Works</h3>
-                    <p>Premium UPVC and glass door installation services for modern, durable, and elegant entryways.</p>
-                    <ul class="service-features-list">
-                        <li><i class="fas fa-check"></i> UPVC door installation</li>
-                        <li><i class="fas fa-check"></i> Glass door fitting</li>
-                        <li><i class="fas fa-check"></i> Sliding doors</li>
-                        <li><i class="fas fa-check"></i> Custom designs</li>
-                    </ul>
-                </div>
-
-                <!-- Sofa/Mattress Shampooing -->
-                <div class="service-detail-card">
-                    <div class="service-detail-icon">
-                        <i class="fas fa-couch"></i>
-                    </div>
-                    <h3>Sofa/Mattress Shampooing</h3>
-                    <p>Professional upholstery cleaning services to refresh and sanitize your sofas and mattresses.</p>
-                    <ul class="service-features-list">
-                        <li><i class="fas fa-check"></i> Sofa cleaning</li>
-                        <li><i class="fas fa-check"></i> Mattress cleaning</li>
-                        <li><i class="fas fa-check"></i> Stain removal</li>
-                        <li><i class="fas fa-check"></i> Odor elimination</li>
-                    </ul>
-                </div>
-
-                <!-- Fabrication (MS/SS) -->
-                <div class="service-detail-card">
-                    <div class="service-detail-icon">
-                        <i class="fas fa-tools"></i>
-                    </div>
-                    <h3>Fabrication (MS/SS)</h3>
-                    <p>Precision metal fabrication services using mild steel and stainless steel for various
-                        applications.</p>
-                    <ul class="service-features-list">
-                        <li><i class="fas fa-check"></i> MS fabrication</li>
-                        <li><i class="fas fa-check"></i> SS fabrication</li>
-                        <li><i class="fas fa-check"></i> Custom designs</li>
-                        <li><i class="fas fa-check"></i> Installation services</li>
-                    </ul>
-                </div>
-
-                <!-- Move-in/Move-out Package -->
-                <div class="service-detail-card">
-                    <div class="service-detail-icon">
-                        <i class="fas fa-box-open"></i>
-                    </div>
-                    <h3>Move-in/Move-out Package</h3>
-                    <p>Complete cleaning and preparation services for moving in or out of your property.</p>
-                    <ul class="service-features-list">
-                        <li><i class="fas fa-check"></i> Deep cleaning</li>
-                        <li><i class="fas fa-check"></i> Painting touch-ups</li>
-                        <li><i class="fas fa-check"></i> Minor repairs</li>
-                        <li><i class="fas fa-check"></i> Ready-to-occupy service</li>
-                    </ul>
-                </div>
-
-                <!-- Festive Makeover Package -->
-                <div class="service-detail-card">
-                    <div class="service-detail-icon">
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h3>Festive Makeover Package</h3>
-                    <p>Special festive cleaning and makeover services to make your home celebration-ready.</p>
-                    <ul class="service-features-list">
-                        <li><i class="fas fa-check"></i> Complete home cleaning</li>
-                        <li><i class="fas fa-check"></i> Painting & polishing</li>
-                        <li><i class="fas fa-check"></i> Decoration support</li>
-                        <li><i class="fas fa-check"></i> Quick turnaround</li>
-                    </ul>
+                <div class="why-choose-image">
+                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600" alt="Professional Construction Team">
                 </div>
             </div>
         </div>
+    </section>
+
+    <!-- What We Offer Section -->
+    <section class="what-we-offer-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">What We Offer</h2>
+                <div class="title-divider"></div>
+                <p class="section-subtitle">Comprehensive building services tailored to your needs</p>
+            </div>
+            
+            <div class="offer-features-grid">
+                <div class="offer-feature">
+                    <div class="offer-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Professional Service</h3>
+                    <p>Highly trained professionals with years of experience in the construction and building maintenance industry.</p>
+                </div>
+                
+                <div class="offer-feature">
+                    <div class="offer-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Quality Assurance</h3>
+                    <p>We use only premium materials and follow industry best practices to ensure long-lasting results.</p>
+                </div>
+                
+                <div class="offer-feature">
+                    <div class="offer-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Complete Solutions</h3>
+                    <p>From planning to execution, we handle every aspect of your project with attention to detail.</p>
+                </div>
+                
+                <div class="offer-feature">
+                    <div class="offer-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>24/7 Availability</h3>
+                    <p>Round-the-clock support for emergency services and customer inquiries.</p>
+                </div>
+                
+                <div class="offer-feature">
+                    <div class="offer-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>Transparent Pricing</h3>
+                    <p>Clear, detailed quotes with no hidden costs. You know exactly what you're paying for.</p>
+                </div>
+                
+                <div class="offer-feature">
+                    <div class="offer-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Custom Solutions</h3>
+                    <p>Tailored services designed to meet your specific requirements and preferences.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-detailed-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Services</h2>
+                <div class="title-divider"></div>
+            </div>
+            <div class="services-detailed-grid">
+                <!-- Wooden Polishing -->
+    <div class="service-detail-card">
+        <div class="service-detail-icon">
+            <i class="fas fa-tree"></i>
+        </div>
+        <h3>Wooden Polishing</h3>
+        <p>Expert wood restoration and polishing services to bring back the natural
+            beauty of your wooden
+            furniture and fixtures.</p>
+        <ul class="service-features-list">
+            <li><i class="fas fa-check"></i> Furniture polishing</li>
+            <li><i class="fas fa-check"></i> Door & window polishing</li>
+            <li><i class="fas fa-check"></i> Wood restoration</li>
+            <li><i class="fas fa-check"></i> Premium finish</li>
+        </ul>
+    </div>
+
+    <!-- Painting -->
+    <div class="service-detail-card">
+        <div class="service-detail-icon">
+            <i class="fas fa-paint-roller"></i>
+        </div>
+        <h3>Painting Services</h3>
+        <p>Professional interior and exterior painting services with attention to detail
+            and high-quality
+            paints.</p>
+        <ul class="service-features-list">
+            <li><i class="fas fa-check"></i> Interior painting</li>
+            <li><i class="fas fa-check"></i> Exterior painting</li>
+            <li><i class="fas fa-check"></i> Texture painting</li>
+            <li><i class="fas fa-check"></i> Color consultation</li>
+        </ul>
+    </div>
+
+    <!-- Tank Cleaning -->
+    <div class="service-detail-card">
+        <div class="service-detail-icon">
+            <i class="fas fa-water"></i>
+        </div>
+        <h3>Tank Cleaning</h3>
+        <p>Thorough water tank cleaning services to ensure clean and safe water supply
+            for your property.
+        </p>
+        <ul class="service-features-list">
+            <li><i class="fas fa-check"></i> Overhead tank cleaning</li>
+            <li><i class="fas fa-check"></i> Underground tank cleaning</li>
+            <li><i class="fas fa-check"></i> Sanitization</li>
+            <li><i class="fas fa-check"></i> Regular maintenance</li>
+        </ul>
+    </div>
+
+    <!-- Seepage Arresting -->
+    <div class="service-detail-card">
+        <div class="service-detail-icon">
+            <i class="fas fa-shield-alt"></i>
+        </div>
+        <h3>Seepage Arresting</h3>
+        <p>Effective waterproofing and seepage control solutions to protect your
+            property from water damage.
+        </p>
+        <ul class="service-features-list">
+            <li><i class="fas fa-check"></i> Waterproofing</li>
+            <li><i class="fas fa-check"></i> Leak detection</li>
+            <li><i class="fas fa-check"></i> Damp proofing</li>
+            <li><i class="fas fa-check"></i> Long-term solutions</li>
+        </ul>
+    </div>
+
+    <!-- Deep Cleaning -->
+    <div class="service-detail-card">
+        <div class="service-detail-icon">
+            <i class="fas fa-broom"></i>
+        </div>
+        <h3>Deep Cleaning</h3>
+        <p>Comprehensive deep cleaning services for homes and offices ensuring every
+            corner is spotless.</p>
+        <ul class="service-features-list">
+            <li><i class="fas fa-check"></i> Home deep cleaning</li>
+            <li><i class="fas fa-check"></i> Office cleaning</li>
+            <li><i class="fas fa-check"></i> Kitchen & bathroom</li>
+            <li><i class="fas fa-check"></i> Sanitization services</li>
+        </ul>
+    </div>
+
+    <!-- Tiles Work -->
+    <div class="service-detail-card">
+        <div class="service-detail-icon">
+            <i class="fas fa-th-large"></i>
+        </div>
+        <h3>Tiles Work</h3>
+        <p>Professional tile installation, repair, and maintenance services for floors,
+            walls, and
+            bathrooms.</p>
+        <ul class="service-features-list">
+            <li><i class="fas fa-check"></i> Tile installation</li>
+            <li><i class="fas fa-check"></i> Tile repair</li>
+            <li><i class="fas fa-check"></i> Grouting</li>
+            <li><i class="fas fa-check"></i> Floor & wall tiling</li>
+        </ul>
+    </div>
+
+    <!-- Toughened Glass Work -->
+    <div class="service-detail-card">
+        <div class="service-detail-icon">
+            <i class="fas fa-window-maximize"></i>
+        </div>
+        <h3>Toughened Glass Work</h3>
+        <p>High-quality toughened glass installation for windows, doors, partitions, and
+            other applications.
+        </p>
+        <ul class="service-features-list">
+            <li><i class="fas fa-check"></i> Glass partitions</li>
+            <li><i class="fas fa-check"></i> Glass doors</li>
+            <li><i class="fas fa-check"></i> Shower enclosures</li>
+            <li><i class="fas fa-check"></i> Custom glass work</li>
+        </ul>
+    </div>
+
+    <!-- Interior & Exterior Work -->
+    <div class="service-detail-card">
+        <div class="service-detail-icon">
+            <i class="fas fa-home"></i>
+        </div>
+        <h3>Interior & Exterior Work</h3>
+        <p>Complete interior and exterior renovation services to transform your space
+            according to your
+            vision.</p>
+        <ul class="service-features-list">
+            <li><i class="fas fa-check"></i> Interior design</li>
+            <li><i class="fas fa-check"></i> Exterior renovation</li>
+            <li><i class="fas fa-check"></i> Space planning</li>
+            <li><i class="fas fa-check"></i> Complete makeover</li>
+        </ul>
+    </div>
+
+    <!-- Electrical, Plumbing, Carpenter Work -->
+    <div class="service-detail-card">
+        <div class="service-detail-icon">
+            <i class="fas fa-bolt"></i>
+        </div>
+        <h3>Electrical, Plumbing & Carpentry</h3>
+        <p>Expert electrical, plumbing, and carpentry services for all your maintenance
+            and installation
+            needs.</p>
+        <ul class="service-features-list">
+            <li><i class="fas fa-check"></i> Electrical installations</li>
+            <li><i class="fas fa-check"></i> Plumbing repairs</li>
+            <li><i class="fas fa-check"></i> Carpentry work</li>
+            <li><i class="fas fa-check"></i> Emergency services</li>
+        </ul>
+    </div>
+
+    <!-- UPVC & Glass Door Works -->
+    <div class="service-detail-card">
+        <div class="service-detail-icon">
+            <i class="fas fa-door-open"></i>
+        </div>
+        <h3>UPVC & Glass Door Works</h3>
+        <p>Premium UPVC and glass door installation services for modern, durable, and
+            elegant entryways.</p>
+        <ul class="service-features-list">
+            <li><i class="fas fa-check"></i> UPVC door installation</li>
+            <li><i class="fas fa-check"></i> Glass door fitting</li>
+            <li><i class="fas fa-check"></i> Sliding doors</li>
+            <li><i class="fas fa-check"></i> Custom designs</li>
+        </ul>
+    </div>
+
+    <!-- Sofa/Mattress Shampooing -->
+    <div class="service-detail-card">
+        <div class="service-detail-icon">
+            <i class="fas fa-couch"></i>
+        </div>
+        <h3>Sofa/Mattress Shampooing</h3>
+        <p>Professional upholstery cleaning services to refresh and sanitize your sofas
+            and mattresses.</p>
+        <ul class="service-features-list">
+            <li><i class="fas fa-check"></i> Sofa cleaning</li>
+            <li><i class="fas fa-check"></i> Mattress cleaning</li>
+            <li><i class="fas fa-check"></i> Stain removal</li>
+            <li><i class="fas fa-check"></i> Odor elimination</li>
+        </ul>
+    </div>
+
+    <!-- Fabrication (MS/SS) -->
+    <div class="service-detail-card">
+        <div class="service-detail-icon">
+            <i class="fas fa-tools"></i>
+        </div>
+        <h3>Fabrication (MS/SS)</h3>
+        <p>Precision metal fabrication services using mild steel and stainless steel for
+            various
+            applications.</p>
+        <ul class="service-features-list">
+            <li><i class="fas fa-check"></i> MS fabrication</li>
+            <li><i class="fas fa-check"></i> SS fabrication</li>
+            <li><i class="fas fa-check"></i> Custom designs</li>
+            <li><i class="fas fa-check"></i> Installation services</li>
+        </ul>
+    </div>
+
+    <!-- Move-in/Move-out Package -->
+    <div class="service-detail-card">
+        <div class="service-detail-icon">
+            <i class="fas fa-box-open"></i>
+        </div>
+        <h3>Move-in/Move-out Package</h3>
+        <p>Complete cleaning and preparation services for moving in or out of your
+            property.</p>
+        <ul class="service-features-list">
+            <li><i class="fas fa-check"></i> Deep cleaning</li>
+            <li><i class="fas fa-check"></i> Painting touch-ups</li>
+            <li><i class="fas fa-check"></i> Minor repairs</li>
+            <li><i class="fas fa-check"></i> Ready-to-occupy service</li>
+        </ul>
+    </div>
+
+    <!-- Festive Makeover Package -->
+    <div class="service-detail-card">
+        <div class="service-detail-icon">
+            <i class="fas fa-star"></i>
+        </div>
+        <h3>Festive Makeover Package</h3>
+        <p>Special festive cleaning and makeover services to make your home
+            celebration-ready.</p>
+        <ul class="service-features-list">
+            <li><i class="fas fa-check"></i> Complete home cleaning</li>
+            <li><i class="fas fa-check"></i> Painting & polishing</li>
+            <li><i class="fas fa-check"></i> Decoration support</li>
+            <li><i class="fas fa-check"></i> Quick turnaround</li>
+        </ul>
+    </div>
+    </div>
+    </div>
     </section>
 
     <!-- CTA Section -->
@@ -319,8 +432,10 @@
                 <div class="footer-grid">
                     <div class="footer-col">
                         <h3 class="footer-title">About AJR Building Solutions</h3>
-                        <p>We are your trusted partner for all building services in Chennai. With a commitment to
-                            quality and customer satisfaction, we deliver excellence in every project.</p>
+                        <p>We are your trusted partner for all building services in Chennai. With a
+                            commitment to
+                            quality and customer satisfaction, we deliver excellence in every
+                            project.</p>
                         <div class="footer-social">
                             <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
                             <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
@@ -331,19 +446,27 @@
                     <div class="footer-col">
                         <h3 class="footer-title">Quick Links</h3>
                         <ul class="footer-links">
-                            <li><a href="index.html"><i class="fas fa-angle-right"></i> Home</a></li>
-                            <li><a href="services.html"><i class="fas fa-angle-right"></i> Services</a></li>
-                            <li><a href="about.html"><i class="fas fa-angle-right"></i> About Us</a></li>
-                            <li><a href="contact.html"><i class="fas fa-angle-right"></i> Contact</a></li>
+                            <li><a href="index.html"><i class="fas fa-angle-right"></i> Home</a>
+                            </li>
+                            <li><a href="services.html"><i class="fas fa-angle-right"></i>
+                                    Services</a></li>
+                            <li><a href="about.html"><i class="fas fa-angle-right"></i> About Us</a>
+                            </li>
+                            <li><a href="contact.html"><i class="fas fa-angle-right"></i>
+                                    Contact</a></li>
                         </ul>
                     </div>
                     <div class="footer-col">
                         <h3 class="footer-title">Our Services</h3>
                         <ul class="footer-links">
-                            <li><a href="services.html"><i class="fas fa-angle-right"></i> Painting</a></li>
-                            <li><a href="services.html"><i class="fas fa-angle-right"></i> Wooden Polishing</a></li>
-                            <li><a href="services.html"><i class="fas fa-angle-right"></i> Deep Cleaning</a></li>
-                            <li><a href="services.html"><i class="fas fa-angle-right"></i> Electrical & Plumbing</a>
+                            <li><a href="services.html"><i class="fas fa-angle-right"></i>
+                                    Painting</a></li>
+                            <li><a href="services.html"><i class="fas fa-angle-right"></i> Wooden
+                                    Polishing</a></li>
+                            <li><a href="services.html"><i class="fas fa-angle-right"></i> Deep
+                                    Cleaning</a></li>
+                            <li><a href="services.html"><i class="fas fa-angle-right"></i>
+                                    Electrical & Plumbing</a>
                             </li>
                         </ul>
                     </div>
@@ -352,7 +475,8 @@
                         <ul class="footer-contact">
                             <li>
                                 <i class="fas fa-map-marker-alt"></i>
-                                <span>2nd floor 17/2 Bharatheeswara Colony<br>5th street, Kodambakkam<br>Chennai -
+                                <span>2nd floor 17/2 Bharatheeswara Colony<br>5th street,
+                                    Kodambakkam<br>Chennai -
                                     600024</span>
                             </li>
                             <li>
