@@ -79,7 +79,7 @@ img {
 }
 
 .top-info{
-    background-color:  #2c3e50;
+    background-color:  #12161a;
     color: var(--text-white);
     padding: 5px 0;
     font-size: 0.85rem;
@@ -198,22 +198,18 @@ img {
     display: flex;
     align-items: center;
     gap: 10px;
-    padding: 20px 0;
+    padding: 12px;
+    /* background-color: #2c3e5045;
+    border-radius: 50%; */
     font-size: 1.5rem;
     font-weight: 700;
     color: #2c3e50;
+    width: 80px;
+    height: 80px;
 }
 
-.logo i {
-    width: 50px;
-    height: 50px;
-    background-color: var(--accent-green);
-    color: var(--text-white);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
+.logo img {
+    object-fit: cover !important;
 }
 
 .logo-text {
