@@ -344,6 +344,142 @@ gtag('js', new Date());
 gtag('config', 'YOUR-GA-TRACKING-ID');
 */
 
+// ===== Service Modal =====
+const serviceData = {
+    'painting': {
+        icon: 'fas fa-paint-roller',
+        title: 'Painting Services',
+        description: 'Professional interior and exterior painting services with attention to detail and high-quality paints. We transform your spaces with premium finishes that last.',
+        features: [
+            'Interior painting',
+            'Exterior painting',
+            'Texture painting',
+            'Color consultation',
+            'Wall preparation & priming',
+            'Premium quality paints',
+            'Clean finish guarantee'
+        ]
+    },
+    'wooden-polishing': {
+        icon: 'fas fa-tree',
+        title: 'Wooden Polishing',
+        description: 'Expert wood restoration and polishing services to bring back the natural beauty of your wooden furniture and fixtures.',
+        features: [
+            'Furniture polishing',
+            'Door & window polishing',
+            'Wood restoration',
+            'Premium finish',
+            'Scratch repair',
+            'Wood treatment',
+            'Long-lasting shine'
+        ]
+    },
+    'deep-cleaning': {
+        icon: 'fas fa-broom',
+        title: 'Deep Cleaning',
+        description: 'Comprehensive deep cleaning services for homes and offices ensuring every corner is spotless and sanitized.',
+        features: [
+            'Home deep cleaning',
+            'Office cleaning',
+            'Kitchen & bathroom',
+            'Sanitization services',
+            'Carpet & upholstery',
+            'Window cleaning',
+            'Post-construction cleanup'
+        ]
+    },
+    'electrical-plumbing': {
+        icon: 'fas fa-bolt',
+        title: 'Electrical & Plumbing',
+        description: 'Professional electrical and plumbing solutions for all requirements with licensed technicians and quality workmanship.',
+        features: [
+            'Electrical repairs & installation',
+            'Plumbing repairs & installation',
+            'Carpenter work',
+            'Wiring & rewiring',
+            'Fixture installation',
+            'Emergency services',
+            'Safety compliance'
+        ]
+    },
+    'glass-upvc': {
+        icon: 'fas fa-window-maximize',
+        title: 'Glass & UPVC Work',
+        description: 'High-quality toughened glass and UPVC door installations with precision and modern designs.',
+        features: [
+            'Toughened glass installation',
+            'UPVC door & window',
+            'Glass partitions',
+            'Shower cubicles',
+            'Custom designs',
+            'Energy efficient',
+            'Professional installation'
+        ]
+    },
+    'fabrication': {
+        icon: 'fas fa-tools',
+        title: 'Fabrication Work',
+        description: 'MS/SS fabrication services for custom requirements including gates, railings, and structural elements.',
+        features: [
+            'MS fabrication',
+            'SS fabrication',
+            'Custom gates & railings',
+            'Structural fabrication',
+            'Welding services',
+            'Design & installation',
+            'Durable & strong'
+        ]
+    }
+};
+
+function openServiceModal(serviceId) {
+    const service = serviceData[serviceId];
+    if (!service) return;
+
+    const modal = document.getElementById('serviceModal');
+    const modalBody = document.getElementById('serviceModalBody');
+
+    modalBody.innerHTML = `
+        <div class="service-modal-icon">
+            <i class="${service.icon}"></i>
+        </div>
+        <h2>${service.title}</h2>
+        <p class="service-description">${service.description}</p>
+        <ul class="service-modal-features">
+            ${service.features.map(feature => `
+                <li><i class="fas fa-check"></i> ${feature}</li>
+            `).join('')}
+        </ul>
+        <div class="service-modal-cta">
+            <a href="contact.html" class="btn btn-primary">Get a Quote</a>
+        </div>
+    `;
+
+    modal.classList.add('show');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeServiceModal() {
+    const modal = document.getElementById('serviceModal');
+    modal.classList.remove('show');
+    document.body.style.overflow = 'auto';
+}
+
+// Close modal when clicking outside
+window.onclick = function(event) {
+    const modal = document.getElementById('serviceModal');
+    if (event.target === modal) {
+        closeServiceModal();
+    }
+}
+
+// Close modal with Escape key
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        closeServiceModal();
+    }
+});
+
 // ===== Console Welcome Message =====
 console.log('%c Welcome to AJR Building Solutions! ', 'background: #2563eb; color: white; font-size: 16px; padding: 10px;');
 console.log('%c For inquiries, call: 9843006765 ', 'color: #2563eb; font-size: 14px;');

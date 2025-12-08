@@ -66,12 +66,6 @@
                     <a href="about.html" class="nav-link">ABOUT</a>
                     <a href="contact.html" class="nav-link">CONTACT</a>
                 </div>
-                <div style="display: flex; gap: 10px; align-items: center; justify-content: center;">
-                    <a href="https://wa.me/919843006765?text=Hello%20AJR%20Building%20Solutions,%20I%20would%20like%20to%20inquire%20about%20your%20services."
-                        target="_blank" class="whatsapp-btn" title="Chat on WhatsApp">
-                        <i class="fab fa-whatsapp"></i>
-                    </a>
-                </div>
                 <button class="mobile-menu-btn" id="mobileMenuBtn">
                     <span></span>
                     <span></span>
@@ -151,42 +145,42 @@
                 <p class="section-subtitle">Comprehensive building solutions tailored to your needs</p>
             </div>
             <div class="services-grid">
-                <div class="service-box">
+                <div class="service-box" onclick="openServiceModal('painting')" style="cursor: pointer;">
                     <div class="service-icon">
                         <i class="fas fa-paint-roller"></i>
                     </div>
                     <h3>Painting Services</h3>
                     <p>Interior and exterior painting with premium quality finishes for lasting beauty.</p>
                 </div>
-                <div class="service-box">
+                <div class="service-box" onclick="openServiceModal('wooden-polishing')" style="cursor: pointer;">
                     <div class="service-icon">
                         <i class="fas fa-tree"></i>
                     </div>
                     <h3>Wooden Polishing</h3>
                     <p>Expert wood restoration and polishing to bring back natural elegance.</p>
                 </div>
-                <div class="service-box">
+                <div class="service-box" onclick="openServiceModal('deep-cleaning')" style="cursor: pointer;">
                     <div class="service-icon">
                         <i class="fas fa-broom"></i>
                     </div>
                     <h3>Deep Cleaning</h3>
                     <p>Thorough cleaning services for homes and offices with complete sanitization.</p>
                 </div>
-                <div class="service-box">
+                <div class="service-box" onclick="openServiceModal('electrical-plumbing')" style="cursor: pointer;">
                     <div class="service-icon">
                         <i class="fas fa-bolt"></i>
                     </div>
                     <h3>Electrical & Plumbing</h3>
                     <p>Professional electrical and plumbing solutions for all requirements.</p>
                 </div>
-                <div class="service-box">
+                <div class="service-box" onclick="openServiceModal('glass-upvc')" style="cursor: pointer;">
                     <div class="service-icon">
                         <i class="fas fa-window-maximize"></i>
                     </div>
                     <h3>Glass & UPVC Work</h3>
                     <p>Toughened glass and UPVC door installations with precision.</p>
                 </div>
-                <div class="service-box">
+                <div class="service-box" onclick="openServiceModal('fabrication')" style="cursor: pointer;">
                     <div class="service-icon">
                         <i class="fas fa-tools"></i>
                     </div>
@@ -454,6 +448,22 @@
             </div>
         </div>
     </footer>
+
+    <!-- Service Popup Modal -->
+    <div id="serviceModal" class="service-modal">
+        <div class="service-modal-content">
+            <span class="service-modal-close" onclick="closeServiceModal()">&times;</span>
+            <div class="service-modal-body" id="serviceModalBody">
+                <!-- Content will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Fixed WhatsApp Button -->
+    <a href="https://wa.me/919843006765?text=Hello%20AJR%20Building%20Solutions,%20I%20would%20like%20to%20inquire%20about%20your%20services."
+        target="_blank" class="whatsapp-fixed-btn" title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
     <script src="script.js"></script>
 </body>
