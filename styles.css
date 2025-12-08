@@ -1195,13 +1195,56 @@ section {
     .feature-box{
         width: 100% !important;
     }
+    
+
+    .areas-section, .stats-section {
+        margin: 10px !important;
+    }
+
+    .section-title{
+        margin-top: 20px !important;
+    }
+
+    .welcome-section{
+        margin: 20px !important;
+    }
 }
 
 @media (max-width: 768px) {
-    .container {
+
+    .cta-content{
+        padding: 0 20px !important;
+    }
+
+    .why-choose-section, .about-content-section, .contact-info-box{
+        padding: 40px 20px !important;
+    }
+
+    .contact-info-box p{
+        width: 70%;
+    }
+
+    .contact-form-box{
+        padding: 40px !important;
+    }
+
+    .footer-mobile{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         padding: 0 20px;
+        width: 100%;
     }
     
+    .welcome-section{
+        margin: 20px !important;
+    }
+    .container {
+        width: 100% !important;
+        padding: 0%;
+        margin:  0%;
+        overflow-x: hidden !important;
+    }
     h1 { font-size: 2.5rem; }
     h2 { font-size: 2rem; }
     
@@ -1212,6 +1255,13 @@ section {
     
     .nav-content{
         padding: 20px 10px;
+    }
+    .section-title{
+        margin-top: 20px !important;
+    }
+
+    .slide-content{
+        padding: 20px !important;
     }
 
     .nav-links {
@@ -1273,7 +1323,7 @@ section {
     }
     
     .slide-title {
-        font-size: 2rem;
+        font-size: 0.5rem;
     }
     
     .slide-subtitle {
@@ -1291,10 +1341,15 @@ section {
     .welcome-features {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .services-section, .welcome-section{
+        margin-bottom: 20px !important;
+        padding: 0 20px !important;
+    }
     
     /* Reduce service container size and fonts */
     .services-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns:  repeat(2, 1fr);
         gap: 20px;
     }
     
@@ -1354,8 +1409,63 @@ section {
         font-size: 0.85rem;
     }
     
+
+    .contact-container{
+        padding: 40px !important;
+    }
+
+    .form-group-container{
+        width: 100% !important;
+    }
+    /* Contact forms */
+    .contact-form-box {
+        width: 100% !important;
+        padding: 20px 16px !important;
+        margin-bottom: 24px !important;
+    }
+
+    .contact-form-box h2 {
+        font-size: 1.6rem !important;
+        line-height: 1.2;
+    }
+
+    .contact-form {
+        gap: 16px;
+    }
+
+    .form-group-container .form-group {
+        width: 50% !important;
+    }
+
+    /* ensure paired fields stack on mobile */
+    .form-group-container .form-group[style*="width: 50%"] {
+        width: 50% !important;
+    }
+
+    /* CTA form wrapper */
+    .cta-section .contact-form-box {
+        width: 100% !important;
+    }
+
+    /* Footer tweaks */
     .footer-grid {
         grid-template-columns: 1fr;
+        gap: 24px;
+        text-align: center;
+    }
+    .footer-title::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .footer-social {
+        justify-content: center;
+    }
+    .footer-links a {
+        justify-content: center;
+    }
+    .footer-contact li {
+        justify-content: center;
+        text-align: left;
     }
     
     section {
@@ -1368,10 +1478,6 @@ section {
 }
 
 @media (max-width: 480px) {
-    .container {
-        padding: 0 15px;
-    }
-    
     .logo-text {
         font-size: 1.2rem;
     }
@@ -1971,5 +2077,45 @@ section {
         font-size: 13px;
         padding: 8px 16px;
     }
+
+    .contact-main-grid {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        flex-direction: column !important;
+    }
+
+    .contact-info-box{
+        width: 100% !important;
+        padding: 0 10px !important;
+    }
+
+    .contact-form-box{
+        width: 400px !important;
+    }
+
+    .map-container{
+        width: 100% !important;
+    }
+
+    .map-section{
+        padding: 20px ;
+    }
+
+    /* .footer-col{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        padding: 0 20px;
+    }
+
+    .footer-col ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    } */
 }
 
