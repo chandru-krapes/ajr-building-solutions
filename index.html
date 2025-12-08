@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Oswald:wght@400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -86,7 +86,7 @@
     <section class="hero-slider">
         <div class="slider-container">
             <!-- Slide 1 -->
-            <div class="slide active" style="background-image: url('assets/pexels-arantxa-treva-351075-959325.jpg');">
+            <div class="slide active" style="background-image: url('assets/pexels-tima-miroshnichenko-6615234.jpg');">
                 <div class="slide-overlay"></div>
                 <div class="slide-content">
                     <div class="container">
@@ -324,7 +324,7 @@
                 <!-- Contact Form -->
                  <div style="display: flex; justify-content: center; align-items: center;">
                 <div class="contact-form-box" style="background-color: #fff; padding: 20px; border-radius: 10px;width: 50%;margin-bottom: 40px;">
-                    <h2 style="text-align: center;">Send Us a Message</h2>
+                    <h2 style="text-align: center;">Get In Touch With Us</h2>
                     <form id="contactForm" class="contact-form">
                         <div class="form-group" style="text-align: left;">
                             <label for="name">Your Name *</label>
@@ -342,9 +342,21 @@
                         </div>
 
                         <div class="form-group" style="text-align: left;">
-                            <label for="service">Service Required</label>
-                            <select id="service" name="service">
-                                <option value="">Select a service</option>
+                            <label for="category">Category *</label>
+                            <select id="category" name="category" required>
+                                <option value="">Select a category</option>
+                                <option value="construction">Construction</option>
+                                <option value="renovation">Renovation</option>
+                                <option value="maintenance">Maintenance</option>
+                                <option value="repair">Repair</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group" style="text-align: left;">
+                            <label for="subcategory">Sub-Category *</label>
+                            <select id="subcategory" name="subcategory" required>
+                                <option value="">Select a sub-category</option>
                                 <option value="wooden-polishing">Wooden Polishing</option>
                                 <option value="painting">Painting</option>
                                 <option value="tank-cleaning">Tank Cleaning</option>
@@ -353,8 +365,7 @@
                                 <option value="tiles-work">Tiles Work</option>
                                 <option value="glass-work">Toughened Glass Work</option>
                                 <option value="interior-exterior">Interior & Exterior Work</option>
-                                <option value="electrical-plumbing">Electrical, Plumbing, Carpenter
-                                    Work</option>
+                                <option value="electrical-plumbing">Electrical, Plumbing, Carpenter Work</option>
                                 <option value="upvc-glass-door">UPVC & Glass Door Works</option>
                                 <option value="sofa-shampooing">Sofa/Mattress Shampooing</option>
                                 <option value="fabrication">Fabrication (MS/SS)</option>
