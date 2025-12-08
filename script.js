@@ -171,14 +171,15 @@ if (contactForm) {
             return;
         }
 
-        // Phone validation (Indian format)
+        // Phone validation (Indian format - supports +91 prefix)
+        const cleanedPhone = data.phone.replace(/\s+/g, '').replace(/^\+91/, '');
         const phoneRegex = /^[6-9]\d{9}$/;
-        if (!phoneRegex.test(data.phone.replace(/\s+/g, ''))) {
+        if (!phoneRegex.test(cleanedPhone)) {
             showMessage('Please enter a valid 10-digit phone number.', 'error');
             return;
         }
 
-        // Simulate form submission (in production, this would send to a server)
+        // Send email using FormSubmit
         try {
             // Show loading state
             const submitBtn = contactForm.querySelector('button[type="submit"]');
@@ -186,45 +187,72 @@ if (contactForm) {
             submitBtn.textContent = 'Sending...';
             submitBtn.disabled = true;
 
-            // Simulate API call
-            await new Promise(resolve => setTimeout(resolve, 1500));
+            // Format phone number
+            const cleanedPhone = data.phone.replace(/\s+/g, '').replace(/^\+91/, '');
+            const formattedPhone = cleanedPhone.length === 10 ? `+91 ${cleanedPhone}` : data.phone;
 
-            // Log form data (in production, this would be sent to server)
-            console.log('Form submitted:', data);
+            // Prepare form data for FormSubmit
+            const formDataToSend = new FormData(contactForm);
+            
+            // Update phone with formatted version
+            formDataToSend.set('phone', formattedPhone);
+            
+            // Add formatted subject with user's name
+            formDataToSend.set('_subject', `New Contact Form Submission from ${data.name}`);
 
-            // Show success message
-            showMessage('Thank you for your message! We will get back to you soon.', 'success');
+            // Send to FormSubmit with proper headers
+            const response = await fetch(contactForm.action, {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json'
+                },
+                body: formDataToSend
+            });
 
-            // Reset form
-            contactForm.reset();
+            // Check response
+            const responseText = await response.text();
+            console.log('FormSubmit Response:', response.status, responseText);
+
+            // FormSubmit returns HTML or JSON
+            if (response.ok) {
+                // Check if response contains success indicators
+                if (responseText.includes('Thank you') || responseText.includes('success') || responseText.includes('form') || response.status === 200) {
+                    // Show success message
+                    showMessage('Thank you for your message! We will get back to you soon.', 'success');
+                    
+                    // Reset form
+                    contactForm.reset();
+                } else {
+                    // Might be a verification email - still show success
+                    showMessage('Thank you for your message! Please check your email to verify the submission. We will get back to you soon.', 'success');
+                    contactForm.reset();
+                }
+            } else {
+                // If AJAX fails, allow form to submit directly
+                console.log('AJAX submission failed, allowing direct form submission...');
+                const submitBtn = contactForm.querySelector('button[type="submit"]');
+                submitBtn.disabled = false;
+                submitBtn.textContent = originalText;
+                
+                // Remove event listener and submit form directly
+                contactForm.removeEventListener('submit', arguments.callee);
+                showMessage('Submitting form...', 'success');
+                setTimeout(() => {
+                    contactForm.submit();
+                }, 100);
+                return;
+            }
 
             // Reset button
             submitBtn.textContent = originalText;
             submitBtn.disabled = false;
 
-            // In production, you would send this data to your email or backend:
-            // Example using EmailJS or similar service:
-            /*
-            emailjs.send('service_id', 'template_id', {
-                from_name: data.name,
-                from_email: data.email,
-                phone: data.phone,
-                service: data.service,
-                message: data.message,
-                to_email: 'ajrbuildingsolution@gmail.com'
-            }).then(() => {
-                showMessage('Thank you for your message! We will get back to you soon.', 'success');
-                contactForm.reset();
-            }).catch(() => {
-                showMessage('Sorry, there was an error sending your message. Please try again.', 'error');
-            });
-            */
-
         } catch (error) {
-            showMessage('Sorry, there was an error sending your message. Please try again.', 'error');
+            console.error('FormSubmit Error:', error);
+            showMessage('Sorry, there was an error sending your message. Please try again or contact us directly.', 'error');
             const submitBtn = contactForm.querySelector('button[type="submit"]');
             submitBtn.disabled = false;
-            submitBtn.textContent = 'Send Message';
+            submitBtn.textContent = originalText;
         }
     });
 }

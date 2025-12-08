@@ -13,29 +13,21 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800;900&display=swap"
         rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        .section-title{
+            font-family: "Poppins", sans-serif !important;
+        }
+    </style>
 </head>
 
 <body>
 
     <!-- Top Bar -->
-    <div class="top-info">
-        <div class="container">
-            <div class="top-bar-content">
-                <div style="display: flex; gap: 10px;justify-content: space-between;align-items: center;width: 100%;">
-                    <a href="tel:1/234-567-8-9012" class="top-bar-item">
-                        <i class="fas fa-phone"></i>
-                        <span>+91 9843006765</span>
-                    </a>
-                    <a href="mailto:info@domain.com" class="top-bar-item">
-                        <i class="fas fa-envelope"></i>
-                        <span>ajrbuildingsolution@gmail.com</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <div class="top-bar">
         <div class="container">
             <div class="top-bar-content">
@@ -79,7 +71,7 @@
     <section class="hero-slider">
         <div class="slider-container">
             <!-- Slide 1 -->
-            <div class="slide active" style="background-image: url('assets/pexels-tima-miroshnichenko-6615234.jpg');">
+            <div class="slide active" style="background-image: url('https://images.pexels.com/photos/221027/pexels-photo-221027.jpeg');">
                 <div class="slide-overlay"></div>
                 <div class="slide-content">
                     <div class="container">
@@ -94,7 +86,7 @@
             </div>
 
             <!-- Slide 2 -->
-            <div class="slide" style="background-image: url('assets/pexels-lucastranimages-27219987.jpg');">
+            <div class="slide" style="background-image: url('https://images.pexels.com/photos/1669754/pexels-photo-1669754.jpeg');">
                 <div class="slide-overlay"></div>
                 <div class="slide-content">
                     <div class="container">
@@ -109,7 +101,7 @@
             </div>
 
             <!-- Slide 3 -->
-            <div class="slide" style="background-image: url('assets/pexels-mikael-blomkvist-8961336.jpg');">
+            <div class="slide" style="background-image: url('https://images.pexels.com/photos/4239125/pexels-photo-4239125.jpeg');">
                 <div class="slide-overlay"></div>
                 <div class="slide-content">
                     <div class="container">
@@ -318,7 +310,15 @@
                  <div style="display: flex; justify-content: center; align-items: center;">
                 <div class="contact-form-box" style="background-color: #fff; padding: 20px; border-radius: 10px;width: 50%;margin-bottom: 40px;">
                     <h2 style="text-align: center;">Get In Touch With Us</h2>
-                    <form id="contactForm" class="contact-form">
+                    <form id="contactForm" class="contact-form" action="https://formsubmit.co/ajrbuildingsolution@gmail.com" method="POST">
+                        <!-- FormSubmit Configuration -->
+                        <input type="hidden" name="_subject" value="New Contact Form Submission from AJR Building Solutions">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_next" value="">
+                        <input type="hidden" name="_autoresponse" value="Thank you for contacting AJR Building Solutions! We have received your message and will get back to you soon.">
+                        <input type="text" name="_honey" style="display:none">
+                        
                         <div class="form-group" style="text-align: left;">
                             <label for="name">Your Name *</label>
                             <input type="text" id="name" name="name" required placeholder="Enter your name">
@@ -334,7 +334,7 @@
                                 <label for="phone">Phone Number *</label>
                                 <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
                             </div>
-                        </div>
+                        </div>  
 
                         <div style="display: flex; gap: 10px;width: 100%;">
 
