@@ -833,6 +833,10 @@ section {
     align-items: center;
 }
 
+.service-box h3{
+    font-family: "Poppins", sans-serif !important;;
+}
+
 .service-box:hover {
     transform: translateY(-5px);
 }
