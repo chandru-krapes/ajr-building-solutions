@@ -2067,13 +2067,14 @@ section {
     .mobile-header{
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: space-between;
+            padding-left: 10px;
             gap: 10px;
             width: 100%;
     }
 
     .mobile-header-title{
-        font-size: 1.2rem;
+        font-size: 1rem;
         color: var(--accent-green);
         text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
         font-family: "Poppins", sans-serif !important;
@@ -2283,6 +2284,10 @@ section {
 
     .map-section{
         padding: 20px ;
+    }
+    
+    .nav-content{
+        padding: 0%;
     }
 
     /* .footer-col{
