@@ -474,10 +474,10 @@ const serviceData = {
             'Emergency services',
             'Safety compliance'
         ],
-        img: [
-            './assets/Wooden_Polishing/Royal emulsion wall painting & wood polish PU finishing.jpg',
-            './assets/Wooden_Polishing/Wooden polishing 2.jpg',
-        ]
+        // img: [
+        //     './assets/Wooden_Polishing/Royal emulsion wall painting & wood polish PU finishing.jpg',
+        //     './assets/Wooden_Polishing/Wooden polishing 2.jpg',
+        // ]
     },
     'glass-upvc': {
         icon: 'fas fa-window-maximize',
@@ -492,10 +492,10 @@ const serviceData = {
             'Energy efficient',
             'Professional installation'
         ],
-        img: [
-            './assets/Wooden_Polishing/Royal emulsion wall painting & wood polish PU finishing.jpg',
-            './assets/Wooden_Polishing/Wooden polishing 2.jpg',
-        ]
+        // img: [
+        //     './assets/Wooden_Polishing/Royal emulsion wall painting & wood polish PU finishing.jpg',
+        //     './assets/Wooden_Polishing/Wooden polishing 2.jpg',
+        // ]
     },
     'fabrication': {
         icon: 'fas fa-tools',
@@ -510,10 +510,10 @@ const serviceData = {
             'Design & installation',
             'Durable & strong'
         ],
-        img: [
-            './assets/Wooden_Polishing/Royal emulsion wall painting & wood polish PU finishing.jpg',
-            './assets/Wooden_Polishing/Wooden polishing 2.jpg',
-        ]
+        // img: [
+        //     './assets/Wooden_Polishing/Royal emulsion wall painting & wood polish PU finishing.jpg',
+        //     './assets/Wooden_Polishing/Wooden polishing 2.jpg',
+        // ]
     }
 };
 
