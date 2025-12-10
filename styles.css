@@ -41,7 +41,7 @@ body {
 
 /* ===== Typography ===== */
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 600;
     line-height: 1.3;
     color: var(--text-dark);
@@ -220,7 +220,7 @@ img {
 }
 
 .logo-text {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
     text-transform: uppercase;
     letter-spacing: 1.5px;
     font-weight: 600;
@@ -731,7 +731,7 @@ section {
 
 .text-center {
     text-align: center;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 /* ===== Welcome Section ===== */
@@ -949,7 +949,7 @@ section {
 .stat-number {
     font-size: 3.5rem;
     font-weight: 700;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
     color: var(--text-white);
     margin-bottom: 10px;
 }
@@ -1045,7 +1045,7 @@ section {
 
 .footer-grid {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    grid-template-columns: repeat(4, 1fr) !important;
     gap: 40px;
 }
 
@@ -1055,14 +1055,15 @@ section {
     margin-bottom: 25px;
     position: relative;
     padding-bottom: 15px;
+    width: 100% !important;
 }
 
 .footer-title::after {
     content: '';
     position: absolute;
     bottom: 0;
-    left: 0;
-    width: 50px;
+    left: 1px;
+    width: 50%;
     height: 3px;
     background-color: var(--accent-green);
 }
@@ -1123,7 +1124,7 @@ section {
 
 .footer-contact li {
     display: flex;
-    gap: 15px;
+    gap: 10px;
     margin-bottom: 20px;
     color: rgba(255,255,255,0.7);
 }
@@ -1197,17 +1198,8 @@ section {
     .areas-grid {
         grid-template-columns: repeat(3, 1fr);
     }
-    
-    .footer-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-    
-    .feature-box{
-        width: 100% !important;
-    }
-    
 
-    .areas-section, .stats-section {
+    .areas-section {
         margin: 10px !important;
     }
 
@@ -1457,16 +1449,6 @@ section {
         width: 100% !important;
     }
 
-    /* Footer tweaks */
-    .footer-grid {
-        grid-template-columns: 1fr;
-        gap: 24px;
-        text-align: center;
-    }
-    .footer-title::after {
-        left: 50%;
-        transform: translateX(-50%);
-    }
     .footer-social {
         justify-content: center;
     }
@@ -1826,6 +1808,7 @@ section {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    align-items: center;
 }
 
 .form-group {
@@ -2070,9 +2053,198 @@ section {
     }
 }
 
+.mobile-header{
+    display: none;
+}
+
 @media (max-width: 768px) {
-    .offer-features-grid {
-        grid-template-columns: 1fr;
+
+    .hero-slider {
+        height: 50vh;
+        padding: 10px 0;
+    }
+
+    .mobile-header{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+    }
+
+    .mobile-header-title{
+        font-size: 1.2rem;
+        color: var(--accent-green);
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        font-family: "Poppins", sans-serif !important;
+    }
+
+    .btn{
+        width: 40% !important;
+        font-size: 8px !important;
+    }
+
+    .slide-buttons{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .slider-arrow{
+        width: 25px;
+        height: 25px;
+        font-size: 12px;
+    }
+
+    .dot{
+        width: 8px !important;
+        height: 8px !important;
+    }
+
+    .stats-section , .container{
+        padding: 0%;
+        margin: 0%;
+    }
+
+    .section-title{
+        font-size: 18px;
+    }
+
+    .section-subtitle{
+        font-size: 14px;
+    }
+
+    .section-header, .services-detailed-grid{
+        margin-bottom: 10px !important;
+    }
+
+    .service-box h3{
+        font-size: 14px !important;
+        width: 100% !important;
+        margin-top: 5px !important;
+    }
+
+    .service-box p, .welcome-text{
+        font-size: 10px !important;
+        width: 100% !important;
+        margin-top: 5px !important;
+    }
+
+    .services-grid{
+        gap: 0px !important;
+        margin: 0 !important;
+    }
+
+    .welcome-content .btn, .text-center a{
+        font-size: 8px !important;
+        width: 50% !important;
+    }
+
+    .feature-box i{
+        font-size: 24px !important;
+    }
+
+    .feature-box h3{
+        font-size: 12px !important;
+    }
+
+    .feature-box p{
+        font-size: 10px !important;
+    }
+
+    .feature-box{
+        padding: 10px 4px 10px 6px;
+    }
+
+    .cta-content h2{
+        font-size: 24px;
+    }
+
+    .cta-content p{
+        font-size: 12px;
+    }
+
+    .contact-container{
+        padding: 0% !important;
+        margin: 0% !important;
+    }
+
+    .footer-main .container {
+        padding: 0 20px;
+    }
+
+    .footer-grid, .offer-features-grid, .services-detailed-grid{
+        grid-template-columns: repeat(2, 1fr) !important;
+        padding: 0%;
+        gap: 10px !important;
+    }
+
+    .footer-col{
+       min-width: 0 !important;
+    }
+
+    .footer-col h3{
+        font-size: 14px !important;
+    }
+
+    .footer-col p{
+        font-size: 10px;
+    }
+
+    .footer-col h2{
+        font-size: 12px;
+    }
+
+    .footer-links, .footer-contact{
+        font-size: 12px !important;
+        display: flex;
+        flex-direction: column;
+        width: 100% !important;
+        align-items: start;
+        justify-content: center;
+    }
+
+    .footer-bottom{
+        font-size: 12px !important;
+    }
+
+    .page-header h1, .why-choose-content h2, .offer-feature i, .service-detail-icon i, 
+    .about-text-content h2, .mission-box h3, .mv-icon-large, .contact-info-box h2,
+    .contact-info-icon i{
+        font-size: 24px !important;
+    }
+
+    .offer-feature h3, .service-detail-card h3{
+        font-size: 16px;
+    }
+
+    .page-header p, .why-choose-content p, .feature-tags span, .offer-feature p, .service-detail-card p, .about-text-content p, .mission-box p, .contact-info-box p{
+        font-size: 12px;
+        width: 100%;
+    }
+
+    .service-detail-card{
+        padding: 20px 14px;
+        min-height: 480px !important;
+    }
+
+    .mission-vision-grid{
+        margin: 0 !important;
+    }
+
+    .offer-icon, .service-detail-icon, .contact-info-icon{
+       width: 60px !important;
+       height: 60px !important;
+    }
+
+    .service-features-list{
+        font-size: 8px;
+    }
+
+    .mission-vision-section{
+        padding: 0% !important;
     }
     
     .why-choose-content h2 {

@@ -1,3 +1,5 @@
+
+
 // ===== Hero Slider =====
 let slideIndex = 1;
 let slideTimer;
@@ -145,6 +147,27 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+// Lazy Loading
+document.addEventListener('DOMContentLoaded', () => {
+    const lazyBackgrounds = document.querySelectorAll('.lazy-background');
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const element = entry.target;
+                const imageUrl = element.dataset.backgroundSrc;
+                element.style.backgroundImage = `url('${imageUrl}')`;
+                observer.unobserve(element);
+            }
+        });
+    });
+
+    lazyBackgrounds.forEach(bg => {
+        observer.observe(bg);
+    });
+});
+
 
 // ===== Contact Form Handling =====
 const contactForm = document.getElementById('contactForm');
@@ -386,6 +409,19 @@ const serviceData = {
             'Wall preparation & priming',
             'Premium quality paints',
             'Clean finish guarantee'
+        ],
+        img: [
+            './assets/Painting/Wall beeding royal paint finishing.jpeg',
+            './assets/Painting/Deco wall painting 6.jpg',
+            './assets/Painting/Deco wall painting 3.jpg',
+            './assets/Painting/Deco work and semi classic finishing.jpeg',
+            './assets/Painting/Deco cupboard painting with metallic classic finishing2.jpg',
+            './assets/Painting/MRF classic finishing.jpg',
+            './assets/Painting/Cupboard Deco classic finishing..jpg',
+            './assets/Painting/Wall paper and deco painting.jpg',
+            './assets/Painting/Deco painting, mat finishing4.jpg',
+            './assets/Painting/Premium wall Art work.jpg',
+            './assets/Painting/Premium wall Art work1.jpg',
         ]
     },
     'wooden-polishing': {
@@ -400,6 +436,11 @@ const serviceData = {
             'Scratch repair',
             'Wood treatment',
             'Long-lasting shine'
+        ],
+        img: [
+            './assets/Wooden_Polishing/Premium Wood polish PU.jpeg',
+            './assets/Wooden_Polishing/Premium Wood polish PU mat finishing.jpeg',
+            './assets/Wooden_Polishing/PU Wood polishing.jpg'
         ]
     },
     'deep-cleaning': {
@@ -414,6 +455,10 @@ const serviceData = {
             'Carpet & upholstery',
             'Window cleaning',
             'Post-construction cleanup'
+        ],
+        img: [
+            './assets/Wooden_Polishing/Royal emulsion wall painting & wood polish PU finishing.jpg',
+            './assets/Wooden_Polishing/Wooden polishing 2.jpg',
         ]
     },
     'electrical-plumbing': {
@@ -428,6 +473,10 @@ const serviceData = {
             'Fixture installation',
             'Emergency services',
             'Safety compliance'
+        ],
+        img: [
+            './assets/Wooden_Polishing/Royal emulsion wall painting & wood polish PU finishing.jpg',
+            './assets/Wooden_Polishing/Wooden polishing 2.jpg',
         ]
     },
     'glass-upvc': {
@@ -442,6 +491,10 @@ const serviceData = {
             'Custom designs',
             'Energy efficient',
             'Professional installation'
+        ],
+        img: [
+            './assets/Wooden_Polishing/Royal emulsion wall painting & wood polish PU finishing.jpg',
+            './assets/Wooden_Polishing/Wooden polishing 2.jpg',
         ]
     },
     'fabrication': {
@@ -456,6 +509,10 @@ const serviceData = {
             'Welding services',
             'Design & installation',
             'Durable & strong'
+        ],
+        img: [
+            './assets/Wooden_Polishing/Royal emulsion wall painting & wood polish PU finishing.jpg',
+            './assets/Wooden_Polishing/Wooden polishing 2.jpg',
         ]
     }
 };
@@ -478,10 +535,47 @@ function openServiceModal(serviceId) {
                 <li><i class="fas fa-check"></i> ${feature}</li>
             `).join('')}
         </ul>
+            ${
+        service.img && service.img.length
+            ? `
+            <div class="modal-slider">
+                <div class="modal-slides">
+                    ${service.img
+                        .map(src => `<img src="${src}" class="modal-slide-img"  style="width: 100%;height: 300px;object-fit: cover"/>`)
+                        .join('')}
+                </div>
+
+                <button class="modal-prev">❮</button>
+                <button class="modal-next">❯</button>
+            </div>
+        `
+            : ''
+    }
         <div class="service-modal-cta">
             <a href="contact.html" class="btn btn-primary">Get a Quote</a>
         </div>
     `;
+
+    if (service.img && service.img.length) {
+        let index = 0;
+        const slides = modalBody.querySelector('.modal-slides');
+        const total = service.img.length;
+    
+        function updateSlider() {
+            slides.style.transform = `translateX(-${index * 100}%)`;
+        }
+    
+        modalBody.querySelector('.modal-prev').onclick = () => {
+            index = (index - 1 + total) % total;
+            updateSlider();
+        };
+    
+        modalBody.querySelector('.modal-next').onclick = () => {
+            index = (index + 1) % total;
+            updateSlider();
+        };
+    }
+    
 
     modal.classList.add('show');
     document.body.style.overflow = 'hidden';
