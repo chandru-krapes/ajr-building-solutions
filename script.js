@@ -463,7 +463,7 @@ const serviceData = {
     },
     'electrical-plumbing': {
         icon: 'fas fa-bolt',
-        title: 'Electrical & Plumbing',
+        title: 'Electrical, Plumbing, Carpentry & Masnory',
         description: 'Professional electrical and plumbing solutions for all requirements with licensed technicians and quality workmanship.',
         features: [
             'Electrical repairs & installation',
@@ -472,7 +472,21 @@ const serviceData = {
             'Wiring & rewiring',
             'Fixture installation',
             'Emergency services',
-            'Safety compliance'
+            'Safety compliance',
+            'Strong and durable construction',
+            'High-quality brick & block work',
+            'Smooth plastering finish',
+            'Expert tile & stone laying',
+            'Crack repair & restoration',
+            'Moisture-resistant solutions',
+            'Accurate leveling & alignment',
+            'Custom woodwork solutions',
+            'Precise measurements & installation',
+            'Durable material usage',
+            'Modular furniture expertise',
+            'Smooth finishing & detailing',
+            'Repair and refurbishment',
+            'Quality hardware fittings'
         ],
         img: [
             './assets/interior/T1.jpeg',
@@ -480,6 +494,9 @@ const serviceData = {
             './assets/interior/T3.jpeg',
             './assets/interior/T4.jpeg',
             './assets/interior/T5.jpeg',
+            './assets/Painting/Before & After Construction painting and exterior designing works2.jpg',
+            './assets/Painting/Complete Building outer Apex painting & metallic paint for gate..jpeg',
+            './assets/Wooden_Polishing/Dining table polishing works - Before & After2.jpg',
         ]
     },
     'glass-upvc': {

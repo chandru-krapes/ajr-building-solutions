@@ -2124,6 +2124,16 @@ section {
         margin-bottom: 10px !important;
     }
 
+    .services-detailed-section .container{
+        padding: 20px !important;
+        overflow: hidden;
+    }
+
+    .service-detail-card{
+        overflow: auto;
+        scrollbar-width: none;
+    }
+
     .service-box h3{
         font-size: 14px !important;
         width: 100% !important;
@@ -2231,7 +2241,7 @@ section {
 
     .service-detail-card{
         padding: 20px 14px;
-        min-height: 480px !important;
+        height: 400px !important;
     }
 
     .mission-vision-grid{
