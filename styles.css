@@ -807,6 +807,93 @@ section {
     margin: 0;
 }
 
+/* ===== Property & Home Care Solutions Section ===== */
+.property-care-section {
+    background-color: var(--bg-white);
+    margin: 80px 0;
+}
+
+.property-care-intro {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 60px;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--text-light);
+}
+
+.property-care-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.property-care-item {
+    background-color: var(--bg-light);
+    padding: 40px 30px;
+    text-align: center;
+    border-radius: 8px;
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.property-care-item:hover {
+    background-color: var(--primary-blue);
+    color: var(--text-white);
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.property-care-item:hover h3 {
+    color: var(--text-white);
+}
+
+.property-care-item:hover .care-icon {
+    color: var(--accent-green-light);
+}
+
+.care-icon {
+    width: 80px;
+    height: 80px;
+    background-color: var(--accent-green);
+    color: var(--text-white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    transition: var(--transition);
+}
+
+.property-care-item h3 {
+    font-size: 1.2rem;
+    margin: 0;
+    color: var(--text-dark);
+    transition: var(--transition);
+}
+
+.property-care-footer {
+    text-align: center;
+    padding: 40px;
+    background: linear-gradient(135deg, var(--accent-green) 0%, var(--accent-green-dark) 100%);
+    border-radius: 8px;
+    color: var(--text-white);
+}
+
+.property-care-footer p {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    color: var(--text-white);
+}
+
+.property-care-footer .btn {
+    margin-top: 10px;
+}
+
 /* ===== Services Section ===== */
 .services-section {
     background-color: var(--bg-light);
@@ -1202,6 +1289,10 @@ section {
         grid-template-columns: repeat(3, 1fr);
     }
 
+    .property-care-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .areas-section {
         margin: 10px !important;
     }
@@ -1350,6 +1441,33 @@ section {
     .services-section, .welcome-section{
         margin-bottom: 20px !important;
         padding: 0 20px !important;
+    }
+
+    .property-care-section {
+        margin: 20px !important;
+        padding: 0 20px !important;
+    }
+
+    .property-care-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .property-care-item {
+        padding: 30px 20px;
+    }
+
+    .property-care-intro {
+        margin-bottom: 40px;
+        font-size: 1rem;
+    }
+
+    .property-care-footer {
+        padding: 30px 20px;
+    }
+
+    .property-care-footer p {
+        font-size: 1rem;
     }
     
     /* Reduce service container size and fonts */
@@ -2102,6 +2220,16 @@ section {
         font-size: 12px;
     }
 
+
+    .property-care-item{
+        padding: 5px;
+    }
+
+    .care-icon{
+        width: 60px;
+        height: 60px;
+    }
+
     .dot{
         width: 8px !important;
         height: 8px !important;
@@ -2156,7 +2284,7 @@ section {
         width: 50% !important;
     }
 
-    .feature-box i{
+    .feature-box i, .care-icon i{
         font-size: 24px !important;
     }
 
@@ -2189,7 +2317,7 @@ section {
         padding: 0 20px;
     }
 
-    .footer-grid, .offer-features-grid, .services-detailed-grid{
+    .footer-grid, .offer-features-grid, .services-detailed-grid, .property-care-grid{
         grid-template-columns: repeat(2, 1fr) !important;
         padding: 0%;
         gap: 10px !important;
@@ -2199,7 +2327,7 @@ section {
        min-width: 0 !important;
     }
 
-    .footer-col h3{
+    .footer-col h3,  .property-care-item h3{
         font-size: 14px !important;
     }
 
@@ -2234,7 +2362,9 @@ section {
         font-size: 16px;
     }
 
-    .page-header p, .why-choose-content p, .feature-tags span, .offer-feature p, .service-detail-card p, .about-text-content p, .mission-box p, .contact-info-box p{
+    .page-header p, .why-choose-content p, .feature-tags span, .offer-feature p, 
+    .service-detail-card p, .about-text-content p, .mission-box p, .contact-info-box p,
+    .property-care-intro p{
         font-size: 12px;
         width: 100%;
     }
