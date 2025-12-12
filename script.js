@@ -234,7 +234,7 @@ if (contactForm) {
 
             // Check response
             const responseText = await response.text();
-            console.log('FormSubmit Response:', response.status, responseText);
+            // console.log('FormSubmit Response:', response.status, responseText);
 
             // FormSubmit returns HTML or JSON
             if (response.ok) {
@@ -252,7 +252,7 @@ if (contactForm) {
                 }
             } else {
                 // If AJAX fails, allow form to submit directly
-                console.log('AJAX submission failed, allowing direct form submission...');
+                // console.log('AJAX submission failed, allowing direct form submission...');
                 const submitBtn = contactForm.querySelector('button[type="submit"]');
                 submitBtn.disabled = false;
                 submitBtn.textContent = originalText;
@@ -363,7 +363,7 @@ function formatPhoneNumber(phoneNumber) {
 function copyToClipboard(text) {
     if (navigator.clipboard) {
         navigator.clipboard.writeText(text).then(() => {
-            console.log('Copied to clipboard:', text);
+            // console.log('Copied to clipboard:', text);
         });
     }
 }
@@ -623,5 +623,5 @@ document.addEventListener('keydown', function(event) {
 });
 
 // ===== Console Welcome Message =====
-console.log('%c Welcome to AJR Building Solutions! ', 'background: #2563eb; color: white; font-size: 16px; padding: 10px;');
-console.log('%c For inquiries, call: 9843006765 ', 'color: #2563eb; font-size: 14px;');
+// console.log('%c Welcome to AJR Building Solutions! ', 'background: #2563eb; color: white; font-size: 16px; padding: 10px;');
+// console.log('%c For inquiries, call: 9843006765 ', 'color: #2563eb; font-size: 14px;');
